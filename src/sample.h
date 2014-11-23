@@ -3,16 +3,20 @@
 
 struct Sample
 {
-    double *feature;
-    int category;
-    int dim;
-    
-    Sample(int dim);
+    Sample();
+    explicit Sample(int dimension);
     Sample(const Sample &obj);
     ~Sample();
     
-    Sample& operator=(const Sample &obj) const;
-    double& operator[](int index);
+    Sample& operator=(const Sample &obj);
+    
+    inline double operator[](int index) const {
+	return feature[index];
+    }
+    
+    double *feature;
+    double category;
+    int dim;
 };
 
 #endif
