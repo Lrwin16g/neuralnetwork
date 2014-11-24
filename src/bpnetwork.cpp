@@ -7,7 +7,9 @@
 #include <limits>
 
 #include "sample.h"
-#include "mlutility.h"
+#include "mllib.h"
+
+
 
 BPNetwork::BPNetwork()
     : dimension_(0), hiddenUnitNum_(0), categoryNum_(0),
