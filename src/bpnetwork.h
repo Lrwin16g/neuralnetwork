@@ -8,7 +8,7 @@ class BPNetwork
 public:
     BPNetwork();
     BPNetwork(int dimension, int hiddenUnitNum, int categoryNum,
-	      double hiddenGain, double outputGain);
+	      double hiddenGain = 0.5, double outputGain = 0.5);
     ~BPNetwork();
     
     void train(const Sample *sampleSet, int sampleNum, double trainCoef, int maxLoop, double termCrit);
@@ -23,6 +23,10 @@ private:
     void initialize();
     void cleanUp();
     
+    // DISALLOW_COPY_AND_ASSIGN
+    BPNetwork(const BPNetwork&);
+    void operator=(const BPNetwork&);
+    
     int		dimension_;
     int		hiddenUnitNum_;
     double	*hiddenUnit_;
@@ -32,10 +36,6 @@ private:
     double	*outputUnit_;
     double	**outputWeight_;
     double	outputGain_;
-    
-    // DISALLOW_COPY_AND_ASSIGN
-    BPNetwork(const BPNetwork&);
-    void operator=(const BPNetwork&);
 };
 
 #endif

@@ -1,5 +1,5 @@
-#ifndef FILELIB_H
-#define FILELIB_H
+#ifndef _FILELIB_H
+#define _FILELIB_H
 
 #include <iostream>
 #include <fstream>
@@ -73,6 +73,7 @@ namespace file
 		}
 	    }
 	}
+	ifs.close();
 	
 	return data;
     };

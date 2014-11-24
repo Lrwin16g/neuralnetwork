@@ -9,8 +9,6 @@
 #include "sample.h"
 #include "mllib.h"
 
-
-
 BPNetwork::BPNetwork()
     : dimension_(0), hiddenUnitNum_(0), categoryNum_(0),
       hiddenGain_(0.5), outputGain_(0.5),

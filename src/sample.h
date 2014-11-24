@@ -19,4 +19,6 @@ struct Sample
     int dim;
 };
 
+int loadSample(const char *filename, Sample *&sample);
+
 #endif

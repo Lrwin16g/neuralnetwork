@@ -1,5 +1,5 @@
-#ifndef _MLUTILITY_H
-#define _MLUTILITY_H
+#ifndef _MLLIB_H
+#define _MLLIB_H
 
 namespace ml
 {    
